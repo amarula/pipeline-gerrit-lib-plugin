@@ -3,7 +3,6 @@ package org.jenkinsci.plugins.pipeline.gerrit.library;
 import com.cloudbees.plugins.credentials.common.StandardListBoxModel;
 import com.cloudbees.plugins.credentials.domains.DomainRequirement;
 
-import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.ExtensionList;
 import hudson.Util;
@@ -12,9 +11,8 @@ import hudson.security.ACL;
 import hudson.util.ListBoxModel;
 import java.util.Collections;
 
-import jenkins.appearance.AppearanceCategory;
 import jenkins.model.GlobalConfiguration;
-import jenkins.model.GlobalConfigurationCategory;
+import jenkins.model.Jenkins;
 
 import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.AncestorInPath;
@@ -90,6 +88,10 @@ public class GerritLibraryConfiguration extends GlobalConfiguration {
     }
 
     public ListBoxModel doFillCredentialsIdItems(@AncestorInPath Item item, @QueryParameter String uri) {
+        if (!Jenkins.get().hasPermission(Jenkins.ADMINISTER)) {
+            return new StandardListBoxModel().includeEmptyValue();
+        }
+
         return new StandardListBoxModel()
                 .includeEmptyValue()
                 .includeAs(ACL.SYSTEM, item, com.cloudbees.plugins.credentials.common.StandardCredentials.class,
