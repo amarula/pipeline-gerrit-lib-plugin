@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/gerrit-lib-plugin.png" width="600" alt="Gerrit Groovy Libraries">
+  <img src="docs/images/gerrit-lib-plugin.png" width="800" alt="Gerrit Groovy Libraries">
 </p>
 
 Pipeline: Gerrit Groovy Libraries
@@ -12,7 +12,7 @@ Unlike regular library definitions, no preconfiguration at the global or folder 
 You can configure the plugin from general settings:
 
 <p align="center">
-  <img src="docs/images/settings.png" width="600" alt="Gerrit config panel">
+  <img src="docs/images/settings.png" width="800" alt="Gerrit config panel">
 </p>
 
 As pipeline example:
