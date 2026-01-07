@@ -5,7 +5,8 @@
 Pipeline: Gerrit Groovy Libraries
 =================================
 
-Allows Pipeline Groovy libraries to be loaded on the fly from public repositories on Gerrit.
+Allows Pipeline Groovy libraries to be loaded on the fly from public repositories on Gerrit,
+private with credentials authentication.
 Unlike regular library definitions, no preconfiguration at the global or folder level is needed.
 
 Example:
