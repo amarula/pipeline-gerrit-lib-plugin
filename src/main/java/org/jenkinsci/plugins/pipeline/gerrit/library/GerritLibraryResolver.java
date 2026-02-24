@@ -31,7 +31,7 @@ public class GerritLibraryResolver extends LibraryResolver {
 
     @Override
     public boolean isTrusted() {
-        return false;
+        return true;
     }
 
     @Override
