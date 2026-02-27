@@ -18,7 +18,7 @@ You can configure the plugin from general settings:
 As pipeline example:
 
 ```groovy
-@Library('@Library('i-tools/ci_jenkins_lib@changes/42/38742/16') _
+@Library('i-tools/ci_jenkins_lib@changes/42/38742/16') _
 if (currentBuildExt().hasChangeIn('src')) {
   return
 }
